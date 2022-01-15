@@ -1,0 +1,11 @@
+.pokemon{
+    /** As Div is a block-level element, in order to change the block level element to the in-line element we have to use display property as inline block. */
+    display:inline-block;
+
+    /* *But the label is centered to the pokemon let's make it center */
+    text-align:center;
+}
+.pokemon img{
+    display:block;
+    
+}
