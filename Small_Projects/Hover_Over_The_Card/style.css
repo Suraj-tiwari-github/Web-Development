@@ -1,0 +1,149 @@
+* {
+  
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+    font-family:'Josefin Sans', sans-serif;
+    height:100vh;
+    width: 100vw;
+    background:url(Images/DSC_0820-Recovered.png) center no-repeat;
+    background-size:100% 100%;
+}
+.card-img{
+     width: 100%;
+    height: auto;
+    
+}
+.card-wrapper{
+    border:1px solid white;
+    height:600px;
+    width:450px;
+    position:absolute;
+    /* To center the wrapper card */
+    top:50%;
+    left:50%;
+    /* top and left moved the card to the botton right. we need to bring it to center, use tranform to with -50% */
+    transform: translate(-50%, -50%); /* now it is center */
+    /* To make the border rounded we are using border-radius */
+    border-radius:5px;
+    transition: box-shadow 1s;
+
+    overflow:hidden; /* to make the card disapper  when top is overflowed.*/
+}
+
+.card-wrapper:hover{
+    box-shadow:0 0 30px #fff;
+}
+
+
+
+.card{
+    position: absolute;
+    top: -100%; /*moving the card up */
+    height:100%;
+    width:100%;
+    background:linear-gradient(190deg,rgba(253, 253, 252, 0.8) 40%,rgba(16, 32, 123, 0.8) 60%);
+    border-radius:inherit;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+    transition: top .3s .9s;
+}
+
+.card-wrapper:hover .card{
+    top: 0;
+}
+
+.card-img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    /* To fit the image properly we are using object-fit for various kind of resolution images. */
+    object-fit:cover;
+    margin-top:15px;
+    border:2px solid #fff;
+    padding: 10px;
+    box-shadow:0px 0px 50px rgba(0,0,0,.5)
+}
+
+.card-heading{
+    font-family:'Source Code Pro', monospace;
+    font-size:30px;
+    font-weight:300;
+    text-transform:uppercase;
+    color:#fff;
+    letter-spacing:3px;
+    background:linear-gradient(#5c1d1d75, #3a3d4d);
+    width:70%;
+    text-align:center;
+    padding: 5px 0;
+    
+}
+
+.card-paragraph{
+    font-size: 18px;
+    color:#fff;
+    width:85%;
+    text-align:justify;
+    position:relative;
+}
+
+.card-paragraph i{
+    color: #fff;
+    font-size:25px;
+    font-style:italic;
+    position:absoulte;
+}
+
+.card-icons{
+    list-style:none;
+    display:flex;
+    width:50%;
+    justify-content: space-around;
+}
+
+.card-icon-link{
+    text-decoration: none;
+    width: 35px;
+    height:35px;
+    border: 1px solid white; /* as we know that anchor tag is a inline element. Change it to block or flex.*/
+    display: flex;
+    /* center the icons  */
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
+    transition: border .3s;
+}
+
+.card-icon-link:hover{
+    border: 1px solid rgb(28, 132, 28);
+}
+
+.card-icon{
+    font-size:25px;
+    color: white;
+    transition: color .3s;
+}
+
+.card-icon-link:hover .card-icon{
+    color: rgb(0, 255, 0);
+}
+
+.card-btn{
+    border:none;
+    outline: none;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    background:linear-gradient(rgb(231, 231, 231),rgb(192, 178, 21));
+    color:white;
+    text-transform:uppercase;
+    font-size:12px;
+    box-shadow: 0 10px 20px rgba(255, 249, 249, 0.5);
+    cursor:pointer
+
+}
