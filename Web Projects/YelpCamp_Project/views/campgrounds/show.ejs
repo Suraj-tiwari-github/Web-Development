@@ -1,0 +1,42 @@
+<!-- !calling the layout function and providing the address of layout directory and boilerplate.ejs is a file template file-->
+<% layout('layouts/boilerplate') %>
+
+<!-- ! Pasting the bootstrap markup here. -->
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card" ">
+  <img src="<%= campgrounds.image %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= campgrounds.title %></h5>
+    <p class="card-text"><%= campgrounds.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item text-muted"><%= campgrounds.location %></li>
+    <li class="list-group-item">$ <%= campgrounds.price %> per night</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+    </div>
+</div>
+
+<!-- !Bootstrap card ending here. -->
+<h1>Campground show</h1>
+<h1><%= campgrounds.title %></h1>
+<h2><%= campgrounds.location %></h2>
+
+<img src="<%= campgrounds.image %>" alt="" />
+<p><%= campgrounds.description %></p>
+<p>
+    <a href="/campgrounds">Go Back</a>
+</p>
+<a href="/campgrounds/<%= campgrounds._id%>/edit">Edit</a>
+<br /><br />
+
+<form action="/campgrounds/<%= campgrounds._id%>?_method=DELETE" method="POST">
+  <button>Delete</button>
+</form>

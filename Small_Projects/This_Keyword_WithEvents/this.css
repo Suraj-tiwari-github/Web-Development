@@ -1,0 +1,19 @@
+div button{
+    margin:20px 40px;
+    border-radius:50%;
+    padding:70px 40px;
+    font-size:larger;
+}
+
+h1{
+    padding:50px;
+    display:flex;
+    flex-direction: center;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#div2 button{
+    margin: 10px;
+}
+

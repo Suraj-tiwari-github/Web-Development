@@ -1,0 +1,40 @@
+div{
+    height:200px;
+    width:200px;
+    background-color:yellow;
+    border:3px solid blue;
+}
+
+div:nth-of-type(1):hover{
+    transform:translate(50px, 100px); /* Translate (x,y) */
+    transition: 2s;
+}
+
+#rotate:hover{
+    transform:rotate(20deg);
+    
+}
+
+#scale:hover{
+    transform:scale(0.5,0.5);
+    transition-property:div 2s;
+    transition-duration: 5s;
+    
+}
+
+#rotate:hover{
+    transform:scale(0.5,0,5);
+}
+
+.scaleX:hover{
+    transform:scaleX(2);
+}
+
+.scaleY:hover{
+    transform:scaleY(-2);
+}
+
+#skew{
+    transform:skew(20deg);
+    transform:skewY(20deg);
+}

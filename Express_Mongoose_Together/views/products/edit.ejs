@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>EDIT Product</title>
+</head>
+<body>
+    <H1>Edit Product here:</H1>
+    <form action='/products/<%= product._id %>?_method=PUT ' method='POST'>
+        <label for='name'>Product Name: </label>
+        <!-- ! we need to pre populate the input because we are editing, the nama and the field should be there so that user can see and edit by himself.  TO do so we are using value in input attribute.-->
+        <input type='text' name='name' placeholder='name' id='name' value=<%= product.name%>>
+
+        <label for='price'>Price</label>
+        <input type='number' placeholder='Price' name='price' id='price' value=<%= product.price%>>
+
+        <label for='category'>Select Category</label>
+        <!-- !Select under the option is not able to populate what we were selected before(priror to Modification), we want all the details as it so we can see and perform all the changes we want. 
+        * to do that we have a selected keyword from HTML, which will be the default selected for number of option given.
+        * here we'll use ternary operator to find out what was seleted, If we found, then we go with selected or else empty. see under options.
+        -->
+        <select name='category' id='category'>
+            <% for(let cate of categories) { %>
+                <option value='<%= cate %>' 
+                <%= product.category=== cate ? 'selected': ' ' %>
+                > <%=cate %> </option>
+            <%} %>
+        </select>
+
+        <button>Update Product</button>
+
+        <a href='/products'>GO BACK</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+
+<%- include('partials/navbar.ejs') %>
+
+   <div class="container">
+    <H1>Browsing the <%= name %> subreddit</H1>
+    <!-- 
+        !name and description  is the property in the object.
+     -->
+    <h2><%= description %> </h2>
+    <p><%= subscribers %> Total Subscribers </p>
+    <hr>
+
+    <h2>Posts: </h2>
+     <B>Title:</B>
+    <%for(let post of posts){ %>
+            <article>
+                <p>  <%= post.title %> - <B><%= post.author %></B> </>
+                    <!--! Displaying img if contains -->
+                <% if (post.img) {%>
+                    <img src='<%= post.img %> ' alt="" 
+                <%}%>
+            </article>
+    <%}%>
+    </div>
+</body>
+</html>

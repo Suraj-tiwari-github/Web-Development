@@ -1,0 +1,59 @@
+<!-- CSS tranforms allow you to move, rotate, scale and skew elements.
+With CSS transform property you can use the following 2d tranformation methods.
+translate()
+rotate()
+scaleX()
+scaleY()
+skew()
+skewX()
+skewY()
+matrix()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='Transform.css'>
+</head>
+<body>
+    <h1>The Translate Method Under Transform</h1>
+    <p>The Translate () methods moves an elements from its current position:</p>
+
+    <br><br>
+    <div>
+        This div element is moved to 50px to the right, and 100px down to its current position.
+    </div>
+    <div id='skew'>
+        This is a skew an element along the X and Y-axis by the given angles.
+        The following example skews the div element 20 degrees along the X-axis, and 10 degrees along the Y-axis.
+    </div>
+
+    <!--The Matrix() Method 
+    The matrix() method combines all the 2D tranform methods into one.
+
+    The matrix() method take six parameters, containing mathematic function, which allows you to rotate, scale,move(translate), and skew elements.
+
+    matrix(scaleX(), skewY(), skewX(), scaleY(), translate(), translateY())
+    -->
+
+    <br><br>
+
+    <div id='rotate'>This div is rotated clockwise 20 degree.</div>
+
+    <!--Using negative values in the deg of rotate, it makes the property to rotate in counter-clockwise.-->
+
+    <h2>The scale Method</h2>
+
+    <br><p>The scale() Method increases or decreases the size of an element (according to the parameters given for the width and height).</p>
+    <br>
+    <p>The following example increases the div element to be two times of its original width, and three times of its orignal height.</p>
+
+    <div id='scale'>This div is a scale.</div>
+
+    <br>
+    <div class=scaleX>This box is a scaleX</div> <br>
+    <div class='scaleY'>This box is a scaleY</div>
+</html>

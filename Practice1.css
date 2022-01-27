@@ -1,0 +1,17 @@
+*{
+    font-size:20px;
+}
+
+a{
+    /*
+    Specify non-transparent defaults to certain properties, allowing them to be styled to be styled with : Visited state.
+    */
+    background-color:white;
+    border:1px solid white;
+}
+
+a:visited{
+    background-color:yellow;
+    border-color:hotpink;
+    color:hotpink;
+}

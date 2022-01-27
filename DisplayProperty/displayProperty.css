@@ -1,0 +1,22 @@
+h1{
+    background-color: brown;
+    border:1px solid black;
+    display:inline;
+}
+span{
+    background-color:aqua;
+    border:2px solid green;
+    padding:10px;
+    margin:px;
+    /*I */ 
+}
+
+div{
+    /* Div are inline elements. we are going to change them into the border elements. */
+    height:25px;
+    width:25px;
+    background-color:orange;
+    border: 5px solid black;
+    display:inline-block;
+    margin:50px;
+}

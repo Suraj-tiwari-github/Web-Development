@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadOnly Attribute</title>
+  </head>
+  <body>
+    <h1>The input readOnly Attribute</h1>
+    <p>
+      The readonly attribure speicifes that an input field should be
+      read-only(cannot be changed):
+    </p>
+
+    <form action="somefile.java" id='form1'>
+      <label for="FirstName">First Name:</label>
+      <input
+        type="text"
+        id="FirstName"
+        value="John"
+        size="4"
+        maxlength="4"
+        autofocus
+      />
+      <p>
+        When a maxlength is set, the input field will not accept more than the
+        specified length. However, this attribute doesn't provide any feedback
+        to the user. If you want to use it, you must alert a user using a code
+        in javascript.
+      </p>
+      <h2>The input pattern attribute</h2>
+      <label for="countryCode">Country Code:</label>
+      <input
+        type="text"
+        id="countryCode"
+        name="countryCode"
+        pattern="[A-Za-Z]{3}"
+        title="Three letter country code"
+      />
+      <br /><br />
+      <input type="submit" value="submit" />
+      <input
+        type="image"
+        src="https://www.google.com/search?q=google&sxsrf=ALeKk02TdhZ_vPtm0CCCoR-RsZSUekFypw:1620102820430&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj4yvGoma_wAhUCwzgGHWKrDoQQ_AUoBHoECAEQBg&biw=1198&bih=884#imgrc=EHjUDy1YNjPeHM"
+        alt="submit"
+        width="48"
+        height="48"
+      />
+      <br /><br />
+      <input list="browsers" />
+      <label for="browsers">This is a data list</label> <br /><br />
+      
+    </form>
+    <p>We are now out side of form and still we can assign a filed which we be linked to the above form.</p>
+    <label for='lastName'>Last Name</label>
+    <input type='text' id='lastName' form='form1'>
+    <input type='submit' value='submit'>
+    <input type='submit' formaction='/Action.java' value='submit as admin'>
+    <input type='submit' formenctype="multipart/form-data" value='Submit as MultiPart/form-data'>
+    <br><br>
+    <input type='submit' formmethod='post' value='Submit using POST'>
+    <br><br>
+    <input type="submit" formnovalidate='formnovalidate'>
+  </body>
+</html>

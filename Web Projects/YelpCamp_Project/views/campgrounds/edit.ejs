@@ -1,0 +1,84 @@
+<!-- calling the layout function and providing the address of layout directory and boilerplate.ejs is a file template file -->
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+  <h1 class="text-center">Edit Campground</h1>
+  <!-- ! div class col-6 is to center the content. -->
+  <div class="col-6 offset-3" >
+    <form
+      action="/campgrounds/<%= campgrounds._id %>?_method=put "
+      method="POST"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="campground[title]"
+          value="<%= campgrounds.title %>"
+        />
+        <!-- ? here campground[title] where campground will be act as an array when we send the form, under which we have title, if suppose more fields were their like address, phone no location, we can easily access with campground.-->
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="location">location:</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="campground[location]"
+          value="<%= campgrounds.location %>"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="image">Image URL</label>
+        <input
+          type="text"
+          id="image"
+          class="form-control"
+          name="campground[image]"
+          value="<%= campgrounds.image %>"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          type="text"
+          id="description"
+          class="form-control"
+          name="campground[description]"
+        >
+        <%= campgrounds.description %>
+        </textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="image">Campground Price</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="price-label">$</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="0.00"
+            aria-label="price-label"
+            aria-describedby="basic-addon1"
+            name="campground[price]"
+            value="<%= campgrounds.price %>"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Update campground</button>
+      </div>
+    </form>
+
+    <footer>
+      <a href="/campgrounds">All Campgrounds</a>
+
+      <a href="/campgrounds">Go Back</a>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+h1{
+    text-align: center;
+    font-size:70px;
+    color:
+}
+p{
+    text-align:left;
+    font-weight: normal;
+    font-family: 'Open Sans';
+    font-size:larger;
+    background-color: #e8e8e4;
+}
+/* Using Id with css  */
+
+button{
+    background-color: #f1faee;
+    color:#e63946
+    
+    
+}
+
+/* Example of attribute selector */
+input[type='password']{
+    color:red;
+}
+
+/* *Using a pseudo class: hover */
+button:hover{
+    background-color: #e63946;
+    color:#e8e8e4
+    
+}
+
+a:hover{
+    text-decoration:underline
+
+}
+
+/* Using id selector which begin with hash#*/
+
+#signup{
+    background-color:#e76f51;
+    color:white;
+}
+
+/* class selectors uses a .(dot) to operates on it.
+ */
+
+ .tag{
+    background-color: #e63946 ;
+    color: #f1faee
+ }
+
+ /* Descendent selector with a space and a element name */
+ span a {
+     color:blue
+ }
+
+ a{
+     text-decoration: none;
+     font-weight: 700 ;
+ }
+
+/* pseudo elements with :: with two colons */
+h2::first-letter{
+    font-size:40px;
+}
+
+p::first-letter{
+    font-size:40px;
+    color:#e76f51
+}
+
+/* Adjacent selection. */
+section+span{
+    font-size:100px;
+    background-color: black;
+}
+
+/* Direct child is marked using > right angle bracket. */
+li>ul{
+    color:#e63946;
+    background-color: red;
+}
+/* Direct child is > selector. */
+footer>a{
+    color:#e63946;
+    font-size:larger;
+}
+
+/* Pseudo selection  */
+
+
+
+ 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Race Registration Form</title>
+  </head>
+  <body>
+      <fieldset>
+    <legend><h1>Race Registration</h1></legend>
+    
+    <form action="somewhere.java">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" size="30" autofocus/>
+    <br /><br />
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" size="30" />
+
+    <h2>Select a Race</h2>
+    <input type="radio" name="race" id="funRun" value="funRun" />
+    <label for="funRun">Fun Run 5K</label>
+    <br />
+    <input type="radio" name="race" id="half_marathon" value="half_marathon" />
+    <label for="half_marathon">Half Marathon</label>
+    <br />
+    <input type="radio" name="race" id="full_marathon" value="full_marathon" />
+    <label for="full_marathon"><b>Full Marathon</b></label>
+    <br /><br />
+    <label for="mail">EMAIL:</label>
+    <input type="email" name="email" id="mail" />
+    <label for="passsword">Password:</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Your Password"
+    />
+    <br /><br />
+    <label for="agegroup">Select Age group</label>
+    <select name="age" id="agegroup">
+      <option value="Under 18">Under 18</option>
+      <option value='Above 18'>Above 18 and Below 60</option>
+      <option value='Above 65'>Above 65</option>
+    </select>
+    <br><br>
+</fieldset>
+    <input type='submit' value='Register For Race'>
+</form>
+  </body>
+</html>

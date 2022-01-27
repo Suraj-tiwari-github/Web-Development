@@ -1,0 +1,49 @@
+.circle{
+    width:300px;
+    height:300px;
+    background-color:black;
+}
+
+.circle:hover{
+    /* A BORDER-RADIUS is used to make a circle, if BORDER-RADIUS given 50 then it makes a cirle. */
+    border-radius: 50%;
+    background-color:rgb(52, 199, 64);
+transition:2s ;
+}
+
+.target{
+    font-size:14px;
+    transition-property:font-size;
+    transition-duration:4s;
+}
+
+.target:hover{
+    font-size:36px;
+} 
+
+section div{
+    height:100px;
+    width:100px;
+    background-color:turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s; /* transition-property transition-duration */
+}
+
+section:hover div{
+    margin-left:500px;
+}
+
+div:nth-of-type(1){
+    transition-timing-function: ease-in;
+}
+
+div:nth-of-type(2){
+    transition-timing-function: ease-out;
+}
+
+div:nth-of-type(3){
+    transition-timing-function: cubic-bezier(0.7,0,0.84,0);
+}
+
+div:nth-of-type(){
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);

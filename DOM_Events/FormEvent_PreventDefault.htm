@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h1>Form Events</h1>
+    <form action='/gods.java' id='tweetForm'>
+        <input type='text' name='username' placeholder='username'>
+        <input type='text' name='tweet' placeholder='tweet'>  
+        <button>Post Tweet</button> 
+        <!-- !When we pressed the Register button, The form will get submitted, In order to prevent submitting the form we can use a command called preventDefault. Which will prevent the default mechanism of forms. This command should be written in js in the addEventListener. It will prevent the form submitting and do some local operation.-->
+
+        <h2>Tweets:</h2>
+        <ul id='tweets'>
+            <li>Click on it to delete it. </li>
+            <li>Hello there</li>
+            <li>Aur miya</li>
+        </ul>
+    </form>
+</body>
+
+    <script src='FormEvent_PrevnetDefault.js'></script>
+</body>
+</html>
